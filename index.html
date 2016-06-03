@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Electron 404</title>
+
+    <style>
+      .pad-container {
+        margin: 1rem;
+        float:left;
+      }
+      .pad {
+        cursor:pointer;
+      }
+      .button {
+        width:100px;
+        height:100px;
+        border:1px solid #efefef;
+        background: #efefef;
+      }
+      .has-audio {
+        background: #efefef;
+      }
+      .playing {
+        background:pink;
+      }
+      .load-audio {
+        font-size:.8rem;
+        border:none;
+        background:none;
+        padding:5px 0;
+        margin:0;
+        cursor:pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Electron 404</h1>
+      <div class="pad-container">
+        <div id="pad-1" class="pad button">
+          <audio id="selected-file0" src="" loop></audio>
+        </div>
+        <button class="select-directory" class="load-audio">Load file</button>
+      </div>
+      <div class="pad-container">
+        <div id="pad-2"class="pad button">
+          <audio id="selected-file1" src="" loop></audio>
+        </div>
+        <button class="select-directory" class="load-audio">Load file</button>
+      </div>
+      <div class="pad-container">
+        <div id="pad-1" class="pad button">
+          <audio id="selected-file2" src="" loop></audio>
+        </div>
+        <button class="select-directory" class="load-audio">Load file</button>
+      </div>
+      <div class="pad-container">
+        <div id="pad-2"class="pad button">
+          <audio id="selected-file3" src="" loop></audio>
+        </div>
+        <button class="select-directory" class="load-audio">Load file</button>
+      </div>
+      <script>
+        require('./app.js');
+      </script>
+  </body>
+</html>
