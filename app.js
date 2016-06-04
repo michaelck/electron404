@@ -15,8 +15,6 @@ for (var i = 0; i < selectDirBtn.length; i++) {
 }
 
 ipc.on('selected-directory', function (event, obj) {
-  // alert(document.getElementById('selected-file'))
-  alert(obj.loc);
   document.getElementById('selected-file'+obj.loc).src = `${obj.files}`
   document.getElementById('pad-1').classList.add('has-audio')
 })
