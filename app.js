@@ -23,14 +23,17 @@ ipc.on('selected-directory', function (event, obj) {
 
 //Start & stop samples by clicking pads
 for (var i = 0; i < pressPadBtn.length; i++) {
-  pressPadBtn[i].addEventListener('click', function (event) {
-    if(!this.classList.contains('playing')){
-        this.getElementsByTagName('audio')[0].currentTime = 0;
-        this.getElementsByTagName('audio')[0].play();
-        this.classList.add('playing');
-    } else {
-      this.getElementsByTagName('audio')[0].pause();
-      this.classList.remove('playing');
-    }
-  })
+  (function (){
+    var currentPad = i;
+    pressPadBtn[i].addEventListener('click', function (event) {
+      if(!this.classList.contains('playing')){
+          document.getElementsByTagName('audio')[currentPad].currentTime = 0;
+          document.getElementsByTagName('audio')[currentPad].play();
+          this.classList.add('playing');
+      } else {
+        document.getElementsByTagName('audio')[currentPad].pause();
+        this.classList.remove('playing');
+      }
+    })
+  }());
 }
