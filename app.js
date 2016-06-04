@@ -16,7 +16,7 @@ for (var i = 0; i < selectDirBtn.length; i++) {
 
 ipc.on('selected-directory', function (event, obj) {
   document.getElementById('selected-file'+obj.loc).src = `${obj.files}`
-  document.getElementById('pad-1').classList.add('has-audio')
+  document.getElementById('pad-'+obj.loc).getElementsByClassName('pad')[0].classList.add('has-audio')
 })
 
 //Start & stop samples by clicking pads
@@ -24,11 +24,11 @@ for (var i = 0; i < pressPadBtn.length; i++) {
   ;(function (){
     var currentPad = i
     pressPadBtn[i].addEventListener('click', function (event) {
-      if(!this.classList.contains('playing')){
+      if( !this.classList.contains('playing') && this.classList.contains('has-audio') ){
           document.getElementsByTagName('audio')[currentPad].currentTime = 0
           document.getElementsByTagName('audio')[currentPad].play()
           this.classList.add('playing')
-      } else {
+        } else if ( this.classList.contains('playing') && this.classList.contains('has-audio') ) {
         document.getElementsByTagName('audio')[currentPad].pause()
         this.classList.remove('playing')
       }
