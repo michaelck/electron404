@@ -41,10 +41,6 @@
             background: #efefef;
         }
 
-        .has-audio {
-            background: #efefef;
-        }
-
         .load-audio {
             font-size: .8rem;
             border: none;
@@ -57,11 +53,16 @@
         .pad {
             /*fill:#cfc4cd*/
             fill: pink;
+            fill-opacity: .5;
+        }
+        
+        .pad.has-audio {
+            background: #efefef;
             fill-opacity: .8;
         }
 
-        .playing {
-            background: pink;
+        .pad.has-audio.playing {
+            fill: #9feaf9;
             fill-opacity: 1;
         }
     </style>
