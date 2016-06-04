@@ -1,6 +1,6 @@
 # Electron404
 
-This is my first attempt at a simple Electron app – it's a basic Sampler that allows you to assign audio files from your local filesystem to the pink trigger pads. You can then start and stop the individual samples by clicking the trigger pads.
+This is my first attempt at a simple Electron app – it's a basic audio sampler that allows you to assign audio files from your local filesystem to the pink trigger pads. You can then start and stop the individual samples by clicking the trigger pads.
 
 # Instructions
 - Click the load icon below one of the pink trigger pads
@@ -15,5 +15,5 @@ This is my first attempt at a simple Electron app – it's a basic Sampler that 
 
 # Thanks
 - [Electron Quick Start Guide](http://electron.atom.io/docs/tutorial/quick-start/)
-- [Kyle Robinson Young's](https://github.com/shama) very clear [Let's write Code tutorial](https://www.youtube.com/watch?v=ojX5yz35v4M)
+- [Kyle Robinson Young's](https://github.com/shama) very clear [Let's Write Code tutorial](https://www.youtube.com/watch?v=ojX5yz35v4M)
 - [Font Awesome](https://github.com/FortAwesome/Font-Awesome) for the load icon.
